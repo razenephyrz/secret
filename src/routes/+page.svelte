@@ -96,7 +96,7 @@
 				placeholder="Masukkan nama kamu"
 				class="input rounded-lg input-bordered w-full"
 			/>
-			<button on:click={verifyName} class="btn btn-secondary w-full">Lanjut</button>
+			<button on:click={verifyName} class="btn bg-pink-900 btn-secondary w-full text-pink-300 py-1 rounded-md">Lanjut</button>
 		</div>
 	</div>
 
@@ -109,7 +109,7 @@
 			class="bg-white/80 backdrop-blur-md px-8 py-6 rounded-3xl shadow-xl text-xl max-w-lg text-center font-medium text-gray-700"
 		>
 			{@html pengantar[currentStage].replace('{nama}', `<span class="text-pink-500 font-bold">${nama}</span>`)}
-			<button on:click={() => currentStage++} class="mt-6 btn btn-outline btn-sm">Lanjut</button>
+			<button on:click={() => currentStage++} class="btn bg-pink-900 btn-secondary w-full text-pink-300 py-1 rounded-md">Lanjut</button>
 		</div>
 	</div>
 
@@ -120,9 +120,9 @@
 		<input
 			bind:value={tebakJawaban}
 			placeholder="Jawabanmu..."
-			class="input input-bordered w-full max-w-sm mb-4"
+			class="input input-bordered rounded-sm outline-pink-800 w-full max-w-sm mb-4"
 		/>
-		<button on:click={startTebakan} class="btn btn-accent">Jawab</button>
+		<button on:click={startTebakan} class="btn bg-pink-900 btn-secondary w-25 text-pink-300 py-1 rounded-md">Jawab</button>
 
 		{#if tebakSalah > 0}
 			<p class="mt-4 text-pink-600 italic">{tebakResponses[tebakSalah - 1]}</p>
